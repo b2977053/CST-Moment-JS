@@ -40,7 +40,7 @@
         var endDay = '';
         for (let i = 0; i < num; i++) {
             let week = dNow.format('E');
-            let dNowString = dNow.format('yyyy/MM/DD');
+            let dNowString = dNow.format('YYYY/MM/DD');
             if (week === '6' || week === '7') {
                 i--;
             } else if (publicHolidays.indexOf(dNowString) > -1) {
@@ -71,7 +71,7 @@
 
 
     function SetStartDay(yyyyMMDD) {
-        dNow = moment('2021/04/01', ['yyyy/MM/DD', 'yyyyMMDD'])
+        dNow = moment(yyyyMMDD, ['YYYY/MM/DD', 'YYYYMMDD'])
     }
     </script>
 </body>
